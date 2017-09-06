@@ -1,0 +1,379 @@
+/* Import fonts
+   These two fonts seem to work well together. Baskerville for the normal text and Franklin for headers */
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(https://fonts.gstatic.com/s/librebaskerville/v4/pR0sBQVcY0JZc_ciXjFsK6Ucnt8gjcHpqyffjHeZWDA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Franklin'), local('LibreFranklin-Regular'), url(https://fonts.gstatic.com/s/librefranklin/v1/PFwjf3aDdAQPvNKUrT3U70L2euXwouSmDRNACsKL_Ek.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html {
+  font-size: 18px;
+  font-family: 'Libre Baskerville';
+  color: #040e20;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Libre Franklin';
+}
+
+p {
+  line-height: 1.45;
+}
+
+.container {
+  margin: auto;
+}
+
+.mobile {
+  display: none;
+}
+
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 20;
+  background-color: white;
+  width: 100%;
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  height: 32px;
+}
+
+.academy {
+  color: #9099a2;
+}
+
+nav ul {
+  display: flex;
+  margin-right: 24px;
+}
+
+nav ul li a {
+  margin-left: 16px;
+  color: #040e20;
+}
+
+.content {
+  padding-top: 64px;
+}
+
+/* Reuse left-side code for all applicable places */
+.left-side {
+  width: 60%;
+  min-width: 60%;
+  max-width: 60%;
+  padding: 32px 24px;
+}
+
+.left-side img {
+  width: 100%;
+  height: auto;
+}
+
+.jumbotron {
+  background-color: #d5d5d5;
+  display: flex;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+}
+
+.main-text h1 {
+  font-size: 2.25rem;
+  padding-bottom: 32px;
+}
+
+.main-text h2 {
+  font-size: 1.75rem;
+  padding-bottom: 24px;
+  font-family: 'Libre Baskerville';
+}
+
+.main-text a {
+  padding: 8px 0px;
+  text-align: center;
+  background-color: #040e20;
+  color: white;
+}
+
+.information {
+  display: flex;
+}
+
+.information .left-side {
+  padding-top: 32px;
+}
+
+.information .left-side img {
+  margin-bottom: 32px;
+}
+
+.information .left-side h2 {
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+}
+
+.information .left-side p {
+  margin-bottom: 2rem;
+}
+
+.quote {
+  color: #9099a2;
+}
+
+.additional-info {
+  border-left: 1px solid #d5d5d5;
+  padding-top: 32px;
+}
+
+.info-block {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #d5d5d5;
+}
+
+.info-block img {
+  width: 35%;
+  max-width: 35%;
+  min-width: 35%;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+.info h4 {
+  font-size: 1.5rem;
+  padding-bottom: 8px;
+}
+
+.info a {
+  color: #9099a2;
+  padding-top: 8px;
+}
+
+.learning {
+  padding: 32px 56px;
+  background-color: #d5d5d5;
+}
+
+.learning h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  padding-bottom: 16px;
+  width: 100%;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course {
+  padding: 16px;
+  width: 30%;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+}
+
+.course-info {
+  padding: 16px;
+}
+
+.course-info h3 {
+  font-size: 1.25rem;
+}
+
+.course-info h4 {
+  padding: 8px 0px;
+}
+
+.thesis {
+  padding: 32px 0px;
+}
+
+.thesis h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  width: 100%;
+}
+
+.thesis-content {
+  display: flex;
+}
+
+.thesis-content video {
+  width: 100%;
+  height: auto;
+}
+
+.thesis-content h3 {
+  font-size: 1.25rem;
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+.thesis-content .additional-info, .thesis-content .info-block {
+  border: none;
+}
+
+/* Adding changes for when screen size is fits mobile screens */
+@media only screen and (max-width: 480px) {
+  header .logo, header nav, .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .mobile ul {
+    justify-content: space-around;
+    margin-right: 0;
+  }
+
+  .jumbotron {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .jumbotron .left-side {
+    width: auto;
+    max-width: none;
+    min-width: none;
+    padding: 0;
+  }
+
+  .jumbotron .main-text {
+    width: auto;
+    padding: 32px 16px;
+  }
+
+  .information .left-side {
+    display: none;
+    padding: none;
+    margin: none;
+  }
+
+  .info-block {
+    flex-direction: column;
+  }
+
+  .additional-info, .info-block {
+    border: none;
+  }
+
+  .info-block img {
+    width: 100%;
+    min-width: none;
+    max-width: none;
+    padding: 16px;
+  }
+
+  .learning {
+    padding: 32px 16px;
+    background-color: white;
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+  }
+
+  .courses {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .courses h2 {
+    margin-bottom: 12px;
+  }
+
+  .course {
+    width: auto;
+    background-color: #d5d5d5;
+    text-align: center;
+    padding: 16px 16px 24px 16px;
+    margin: 4px 0px;
+  }
+
+  .course img, .course-info h4, .course-info p {
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+
+  .thesis {
+    padding: 32px 0px 24px 0px;
+  }
+
+  .thesis h2 {
+    margin-bottom: 16px;
+  }
+
+  .thesis-content .left-side {
+    width: auto;
+    max-width: none;
+    padding: none;
+    margin: none;
+  }
+
+  .thesis-content .left-side video {
+    width: 100%;
+  }
+
+  .thesis-content .left-side h3, .thesis-content .left-side p, .thesis-content .additional-info {
+    display: none;
+    padding: none;
+    margin: none;
+  }
+
+  footer .terms-and-privacy {
+    display: none;
+    margin: none;
+    padding: none;
+  }
+}
+
+footer {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #d5d5d5;
+  height: 4rem;
+}
+
+.terms-and-privacy ul {
+  display: flex;
+}
+
+.terms-and-privacy ul li a {
+  padding: 0px 8px;
+}
